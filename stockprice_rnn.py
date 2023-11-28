@@ -7,9 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/14MUNIQBm6O2X02g3p90-ANd_Tbhd-MlK
 """
 
-from google.colab import drive
-drive.mount('/content/drive')
-
 """**This code implement a simple RNN model to take a series of a price for a stock in the market as input, and based on the prices of previous 25 days, predict the stock value of the next day**"""
 
 import tensorflow
@@ -24,7 +21,7 @@ import matplotlib.pyplot as plt
 
 # Input the csv file which has the prices of each day under the column of "price"
 
-prices = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/Dataset/FB-stock-prices.csv")
+prices = pd.read_csv("FB-stock-prices.csv")
 
 print(prices.dtypes)
 prices.head()
